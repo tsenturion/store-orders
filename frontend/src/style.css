@@ -1,0 +1,150 @@
+@import 'tailwindcss';
+
+@theme {
+  --color-paper: #f5f4ef;
+  --color-ink: #26362d;
+  --color-muted: #757d73;
+  --color-accent: #a75336;
+  --font-sans: 'Segoe UI', Arial, sans-serif;
+  --font-display: Georgia, 'Times New Roman', serif;
+}
+
+:root {
+  color: #26362d;
+  background: #f5f4ef;
+  font-family: 'Segoe UI', Arial, sans-serif;
+}
+body {
+  margin: 0;
+}
+button,
+a,
+input,
+select,
+textarea {
+  -webkit-tap-highlight-color: transparent;
+}
+button {
+  cursor: pointer;
+}
+button:disabled {
+  cursor: not-allowed;
+  opacity: 0.55;
+}
+button,
+input,
+select,
+textarea {
+  transition:
+    background 0.15s,
+    border-color 0.15s,
+    box-shadow 0.15s;
+}
+button:focus-visible,
+a:focus-visible {
+  outline: 3px solid #a7533660;
+  outline-offset: 4px;
+}
+input,
+select,
+textarea {
+  border: 1px solid #d9ddd4;
+  border-radius: 10px;
+  background: white;
+  padding: 11px 13px;
+  width: 100%;
+  color: #26362d;
+}
+input:focus,
+select:focus,
+textarea:focus {
+  outline: none;
+  border-color: #a75336;
+  box-shadow: 0 0 0 3px #a7533615;
+}
+input[type='checkbox'] {
+  width: 18px;
+  height: 18px;
+  accent-color: #26362d;
+}
+label {
+  display: block;
+  font-size: 13px;
+  font-weight: 600;
+}
+label > input,
+label > select,
+label > textarea {
+  margin-top: 7px;
+  font-weight: 400;
+}
+.primary {
+  background: #26362d;
+  color: white;
+  border-radius: 10px;
+  padding: 12px 20px;
+  font-weight: 600;
+  font-size: 14px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 9px;
+}
+.primary:hover:not(:disabled) {
+  background: #3f5245;
+}
+.secondary {
+  border: 1px solid #d6dbd2;
+  border-radius: 10px;
+  padding: 11px 17px;
+  background: white;
+  font-size: 14px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+}
+.secondary:hover:not(:disabled) {
+  background: #eef0e9;
+}
+.card {
+  border: 1px solid #e2e4db;
+  border-radius: 16px;
+  background: white;
+}
+.eyebrow {
+  font-size: 11px;
+  letter-spacing: 0.18em;
+  font-weight: 600;
+  text-transform: uppercase;
+}
+.fade-enter-active,
+.fade-leave-active {
+  transition: opacity 0.2s;
+}
+.fade-enter-from,
+.fade-leave-to {
+  opacity: 0;
+}
+.drawer-enter-active,
+.drawer-leave-active {
+  transition:
+    transform 0.25s ease,
+    opacity 0.2s;
+}
+.drawer-enter-from,
+.drawer-leave-to {
+  transform: translateX(100%);
+  opacity: 0;
+}
+dialog {
+  max-height: 90vh;
+}
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    transition: none !important;
+    scroll-behavior: auto !important;
+  }
+}
